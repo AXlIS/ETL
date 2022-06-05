@@ -47,11 +47,11 @@ jobs:
           git config --global user.name 'AXlIS'
           git config --global user.email 'axis@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git pull
           git fetch
           git checkout $GITHUB_HEAD_REF
           git add .
           git commit -m "Update HTML report"
+          git pull
           git push
 
     - name: Send message to telegram
