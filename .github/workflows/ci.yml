@@ -38,6 +38,7 @@ jobs:
     - name: HTML report
       if: always()
       run: |
+          rm -rf ./lint-report
           flake8 ./etl --per-file-ignores="__init__.py:F401" --format=html --htmldir=lint-report
 
     - name: Update HTML report
