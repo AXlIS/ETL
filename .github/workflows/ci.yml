@@ -51,3 +51,19 @@ jobs:
           git add .
           git commit -m "Update HTML report"
           git push
+
+    - name: Send message to telegram
+      if: always()
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+          ${{ github.actor }} created commit:
+          Commit message: ${{ github.event.commits[0].message }}
+
+          Repository: ${{ github.repository }}
+
+          See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+          Python ${{ matrix.python-version }} version CI status: ${{ job.status }}
