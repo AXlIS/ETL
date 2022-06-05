@@ -48,5 +48,6 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git fetch
           git checkout $GITHUB_HEAD_REF
-          git commit -am "Update HTML report"
+          git add .
+          git commit -m "Update HTML report"
           git push
