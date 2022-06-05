@@ -179,9 +179,6 @@
                </ul><tt><i>21</i>     <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">):</span></tt>
             </div>
             <div id="l22"
-               class="code sev- "><tt><i>22</i>         <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></tt>
-            </div>
-            <div id="l23"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -191,7 +188,10 @@
                      </span>
                      Found nested function: inner</li>
                
-               </ul><tt><i>23</i>         <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </ul><tt><i>22</i>         <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i>         <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
             </div>
             <div id="l24"
                class="code sev- "><tt><i>24</i>             <span class="n">time</span> <span class="o">=</span> <span class="n">start_sleep_time</span></tt>
