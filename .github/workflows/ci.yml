@@ -25,15 +25,15 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install wemake-python-styleguide mypy
+        pip install wemake-python-styleguide mypy flake8-html
 
     - name: Static type checking
       if: always()
-      run: mypy ./src
+      run: mypy ./etl
 
     - name: Finds style issues
       if: always()
-      run: flake8 ./src
+      run: flake8 ./etl
 
     - name: HTML report
       if: always()
