@@ -95,3 +95,6 @@ etl/volumes/*.log
 
 ### Elastic ###
 elasticdb/
+
+.env
+/.env.db
